@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동아제약 클론코딩</title>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/libs.css" />
+    <!-- js -->
+    <script src="js/libs/swiper.js" defer></script>
+  </head>
+  <body>
+    <!-- Skip Navigation -->
+    <!-- 어떻게 하는지 모르겠음 -->
+    <div class="skip"></div>
+    <div class="wrap">
+      <!-- header  -->
+      <!-- class: header-home is-dark is-pc is-scroll is-hidden 이 추가되면 기능하게 만들 것같음 -->
+      <header class="header header-home is-dark is-pc is-scroll is-hidden">
+        <div class="header-mask"></div>
+        <!-- class: only-pc is-background 추가 될 예장 -->
+        <div class="header-top"></div>
+        <div class="header-bottom"></div>
+      </header>
+      <!-- header end  -->
+
+      <!-- main  -->
+      <main id="content" class="content page-home js-page-home">
+        <div class="main-content">
+          <div class="section visual">
+            <div class="visual-inner">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="/common/images/banner/visual1-1.png"
+                      alt="visual-img only-pc"
+                    />
+                    <img
+                      src="/common/images/banner/visual1-2.png"
+                      alt="visual-img only-mo"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="/common/images/banner/visual2-1.png"
+                      alt="visual-img only-pc"
+                    />
+                    <img
+                      src="/common/images/banner/visual2-2.png"
+                      alt="visual-img only-mo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                  <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section key-info">
+            <div class="container">
+              <div class="section-box">
+                <div class="main-title">
+                  <strong class="sub-title">
+                    <span class="text animate-active" data-animate="slideInUp"
+                      >주요현황</span
+                    >
+                  </strong>
+                  <h2 class="title">
+                    <span class="text animate-active" data-animate="slideInUp"
+                      >한계를 넘어서,</span
+                    >
+                    <span class="text only-pc">
+                      <span class="text animate-active" data-animate="slideInUp"
+                        >중외제약이</span
+                      >
+                    </span>
+                    <span class="text only-pc">
+                      <span
+                        class="text animate-active"
+                        data-animate="slideInUp"
+                      >
+                        내일을 바꿉니다.
+                      </span>
+                    </span>
+                    <span class="only-mo">
+                      <span class="text animate-active" data-animate="slideInUp"
+                        >중외제약이 내일을 바꿉니다.</span
+                      >
+                    </span>
+                  </h2>
+                  <div class="link-animate-box animate-active">
+                    <a
+                      href="#"
+                      class="link-animate-text link-animate-hover-black"
+                      >자세히 보기</a
+                    >
+                  </div>
+                </div>
+                <div class="section-col-right">
+                  <p
+                    class="key-info-desc animate-active"
+                    data-animate="slideInUp"
+                  >
+                    생명을 존중하는 정신으로 국내 최초 수액제 국산화에
+                    앞장섰습니다.
+                    <br class="only-pc" />환자 치료를 최우선으로 생각하며 필수
+                    의약품 개발에 매진해왔습니다.<br />앞으로도 공익을 우선하며
+                    국민 건강을 지키는 의약품 공급에 최선을 다하겠습니다.
+                  </p>
+                  <ul class="statistic-list">
+                    <li
+                      class="statistic-item animate-active"
+                      data-animate="slideInUp"
+                    >
+                      <span class="statistic-title">설립년도</span>
+                      <strong class="statistic-detail">
+                        1986년
+                        <span class="unit">년</span>
+                      </strong>
+                    </li>
+                    <li
+                      class="statistic-item animate-active"
+                      data-animate="slideInUp"
+                    >
+                      <span class="statistic-title">2020~2023년 매출</span>
+                      <strong class="statistic-detail">
+                        37%
+                        <span class="unit">증가</span>
+                      </strong>
+                    </li>
+                    <li
+                      class="statistic-item animate-active"
+                      data-animate="slideInUp"
+                    >
+                      <span class="statistic-title">임직원수(2024년)</span>
+                      <strong class="statistic-detail">
+                        1,104
+                        <span class="unit">명</span>
+                      </strong>
+                    </li>
+                    <li
+                      class="statistic-item animate-active"
+                      data-animate="slideInUp"
+                    >
+                      <span class="statistic-title">2023년 영업이익</span>
+                      <strong class="statistic-detail">
+                        59.3
+                        <span class="unit">% 증가</span>
+                      </strong>
+                    </li>
+                    <li
+                      class="statistic-item animate-active"
+                      data-animate="slideInUp"
+                    >
+                      <span class="statistic-title">부채비율 감소</span>
+                      <strong class="statistic-detail">
+                        93
+                        <span class="unit">% 감소</span>
+                      </strong>
+                    </li>
+                    <li
+                      class="statistic-item animate-active"
+                      data-animate="slideInUp"
+                    >
+                      <span class="statistic-title">자본총계 증가</span>
+                      <strong class="statistic-detail">
+                        28
+                        <span class="unit">% 증가</span>
+                      </strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section lab js-section-lab">
+            <div class="container">
+              <div class="section-box">
+                <div class="section-col-left">
+                  <div class="main-title">
+                    <strong class="sub-title">
+                      <span class="text animate-active" data-animate="slideInUp"
+                        >R&D</span
+                      >
+                    </strong>
+                    <h2 class="title">
+                      <span class="text animate-active" data-animate="slideInUp"
+                        >중외제약 연구소</span
+                      >
+                    </h2>
+                    <p class="desc">
+                      치료의 한계를 넘어
+                      <br />생명을 향한 가능성을 열고 <br />세계를 향한 혁신을
+                      이어갑니다
+                    </p>
+                    <div class="link-animate-box animate-active">
+                      <a
+                        href="#"
+                        class="link-animate-text link-animate-hover-black"
+                        >자세히 보기</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="section-col-right">
+                  <ul class="lab-list">
+                    <li class="lab-item center-mo js-lab-item">
+                      <a href="#" class="lab-link">
+                        <span class="lab-image">
+                          <img
+                            src="common/images/banner/item-1.png"
+                            alt="lab-img-1"
+                          />
+                        </span>
+                        <div class="lab-info">
+                          <strong class="info-title"
+                            >항암제/재생의학치료제</strong
+                          >
+                          <span class="info-desc"
+                            >anticancer/regenerative medicine</span
+                          >
+                        </div>
+                        <div class="lab-info-hover only-pc">
+                          <i
+                            aria-hidden="true"
+                            class="icon icon-lab-center"
+                          ></i>
+                          <strong class="info-title"
+                            >항암제/재생의학치료제</strong
+                          >
+                          <p class="info-desc">
+                            기존의 틀을 바꾸고 <br />불편함을 해결하는 연구를
+                            지향합니다
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="lab-item right-mo js-lab-item 2">
+                      <a href="#" class="lab-link">
+                        <span class="lab-image">
+                          <img
+                            src="common/images/banner/item-2.png"
+                            alt="lab-img-1"
+                          />
+                        </span>
+                        <div class="lab-info">
+                          <strong class="info-title"
+                            >AI 기반 신속/최적화 연구 플랫폼</strong
+                          >
+                          <span class="info-desc"
+                            >AI-powered Fast/Optimized Research Platform</span
+                          >
+                        </div>
+                        <div class="lab-info-hover only-pc">
+                          <i
+                            aria-hidden="true"
+                            class="icon icon-lab-center"
+                          ></i>
+                          <strong class="info-title"
+                            >AI 기반 신속/최적화 연구 플랫폼</strong
+                          >
+                          <p class="info-desc">
+                            AI-powered Fast/Optimized<br />Research Platform
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="lab-item center-mo lab-itme-full js-lab-item 3">
+                      <a href="#" class="lab-link">
+                        <span class="lab-image">
+                          <img
+                            src="common/images/banner/item-3.png"
+                            alt="lab-img-1"
+                          />
+                        </span>
+                        <div class="lab-info">
+                          <strong class="info-title">개량신약, 제네릭</strong>
+                          <span class="info-desc">an improved new drug</span>
+                        </div>
+                        <div class="lab-info-hover only-pc">
+                          <i
+                            aria-hidden="true"
+                            class="icon icon-lab-center"
+                          ></i>
+                          <strong class="info-title">개량신약, 제네릭</strong>
+                          <p class="info-desc">an improved new drug</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="lab-item center-mo js-lab-item">
+                      <a href="#" class="lab-link">
+                        <span class="lab-image">
+                          <img
+                            src="common/images/banner/item-4.png"
+                            alt="lab-img-1"
+                          />
+                        </span>
+                        <div class="lab-info">
+                          <strong class="info-title">연속흐름반응</strong>
+                          <span class="info-desc">Flow Chemistry</span>
+                        </div>
+                        <div class="lab-info-hover only-pc">
+                          <i
+                            aria-hidden="true"
+                            class="icon icon-lab-center"
+                          ></i>
+                          <strong class="info-title">연속흐름반응</strong>
+                          <p class="info-desc">Flow Chemistry</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="lab-item right-mo js-lab-item">
+                      <a href="#" class="lab-link">
+                        <span class="lab-image">
+                          <img
+                            src="common/images/banner/item-5.png"
+                            alt="lab-img-1"
+                          />
+                        </span>
+                        <div class="lab-info">
+                          <strong class="info-title"
+                            >항면역치료제/항암제</strong
+                          >
+                          <span class="info-desc"
+                            >immunotherapy / anti-cancer drugs</span
+                          >
+                        </div>
+                        <div class="lab-info-hover only-pc">
+                          <i
+                            aria-hidden="true"
+                            class="icon icon-lab-center"
+                          ></i>
+                          <strong class="info-title"
+                            >항면역치료제/항암제</strong
+                          >
+                          <p class="info-desc">
+                            immunotherapy / anti-cancer drugs
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="lab-item left-mo js-lab-item">
+                      <a href="#" class="lab-link">
+                        <span class="lab-image">
+                          <img
+                            src="common/images/banner/item-6.png"
+                            alt="lab-img-1"
+                          />
+                        </span>
+                        <div class="lab-info">
+                          <strong class="info-title">오픈 이노베이션</strong>
+                          <span class="info-desc">Open Innovation</span>
+                        </div>
+                        <div class="lab-info-hover only-pc">
+                          <i
+                            aria-hidden="true"
+                            class="icon icon-lab-center"
+                          ></i>
+                          <strong class="info-title">오픈 이노베이션</strong>
+                          <p class="info-desc">Open Innovation</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section intro-lab">
+            <div class="container">
+              <div class="main-title">
+                <strong class="sub-title">
+                  <span class="text animate-active" data-animate="slideInUp"
+                    >연구소 소개</span
+                  >
+                </strong>
+                <h2 class="title">
+                  <span class="text">
+                    <span class="text animate-active" data-animate="slideInUp"
+                      >첨단 과학으로</span
+                    >
+                  </span>
+                  <span class="text">
+                    <span class="text animate-active" data-animate="slideInUp"
+                      >신약으로 여는 연구소</span
+                    >
+                  </span>
+                </h2>
+                <div class="link-animate-box animate-active">
+                  <a href="#" class="link-animate-text link-animate-hover-black"
+                    >자세히 보기</a
+                  >
+                </div>
+              </div>
+              <div class="intro-lab-box-slide">
+                <!-- swiper -->
+              </div>
+            </div>
+          </div>
+          <div class="section main-brand js-section-main-brnad is-change-bg">
+            <div class="brand-wrap">
+              <div class="main-title">
+                <strong class="sub-title">
+                  <span class="text animate-active" data-animate="slideInUp">
+                    브랜드 소개
+                  </span>
+                </strong>
+                <h2 class="title">
+                  <span class="text">
+                    <span class="text animate-active">소비자읜 건강한</span>
+                  </span>
+                  <span class="text">
+                    <span class="text animate-active">일상에 함께 합니다</span>
+                  </span>
+                </h2>
+                <div
+                  class="link-animate-box animate-active"
+                  data-animate="fadeInUp"
+                >
+                  <a href="#" class="link-animate-text link-animate-hover-black"
+                    >자세히 보기</a
+                  >
+                </div>
+              </div>
+              <div class="brand-area">
+                <!-- swiper -->
+              </div>
+            </div>
+          </div>
+          <div class="section business-philosophy">
+            <div class="container">
+              <div class="section-box">
+                <div class="main-title">
+                  <strong class="sub-title">
+                    <span class="text animate-active" data-animate="slideInUp"
+                      >생명존중경영</span
+                    >
+                  </strong>
+                  <h2 class="title">
+                    <span class="text animate-active" data-animate="slideInUp">
+                      지속가능경영은 곧
+                    </span>
+                    <span class="text animate-active" data-animate="slideInUp">
+                      생명존중 경영입니다
+                    </span>
+                  </h2>
+                  <div
+                    class="link-animate-box animate-active"
+                    data-animate="fadeInUp"
+                  >
+                    <a href="#" class="lick-animate-text">자세히 보기</a>
+                  </div>
+                </div>
+                <div class="business-philosophy-content">
+                  <span class="image animate-active" data-animate="fadeInUp">
+                    <img
+                      class="only-pc"
+                      src="/common/images/banner/business-img.png"
+                      alt="business-img"
+                    />
+                    <img
+                      class="only-mo"
+                      src="/common/images/banner/business-img.png"
+                      alt="business-img"
+                    />
+                  </span>
+                  <div class="txt-box">
+                    <p
+                      class="txt-mission only-pc animate-active"
+                      data-animate="fadeInUp"
+                    >
+                      JW중외제약은 사회적 책임을 다하고 지속간으한 미래를
+                      만듭니다.
+                    </p>
+                    <p
+                      class="txt-mission only-mo animate-active"
+                      data-animate="fadeInUp"
+                    >
+                      JW중외제약은 사회적 책임을 다하고 지속가능한 미래를
+                      만듭니다.
+                    </p>
+                    <p
+                      class="txt-other-info only-pc animate-active"
+                      data-animate="fadeInUp"
+                    >
+                      JW중외제약은<br />사회공헌 커미티를 중심으로<br />
+                      의료, 학술, 환우, 장애인 지원 등<br />다양한 방식으로
+                      사회적 가치를 실현합니다
+                    </p>
+                    <p
+                      class="txt-other-info only-pc animate-active"
+                      data-animate="fadeInUp"
+                    >
+                      생명을 존중하는 경영이<br />지속가능한 미래를 만듭니다
+                    </p>
+                    <p
+                      class="txt-other-info only-mo animate-active"
+                      data-animate="fadeInUp"
+                    >
+                      JW중외제약은<br />사회공헌 커미티를 중심으로 의료, 학술,
+                      환우, 장애인 지원 등 다양한 방식으로 사회적 가치를
+                      실현합니다<br />생명을 존중하는 경영이<br />지속가능한
+                      미래를 만듭니다
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section news">
+            <div class="container">
+              <div class="main-title">
+                <strong class="sub-title">
+                  <span class="text animate-active" data-animate="slideInUp"
+                    >What's NEW</span
+                  >
+                </strong>
+                <h2 class="title">
+                  <span class="text animate-active" data-animate="slideInUp">
+                    동아제약 소식
+                  </span>
+                </h2>
+                <div
+                  class="link-animate-box animate-active"
+                  data-animate="fadeInUp"
+                >
+                  <a href="#" class="lick-animate-text">뉴스룸 더보기</a>
+                </div>
+              </div>
+              <div class="news-area">
+                <!-- swiper -->
+              </div>
+            </div>
+          </div>
+          <div class="back-to-top js-back-to-top is-show">
+            <span class="line" style="height: 100%"></span>
+            <span class="line" style="width: 100%"></span>
+            <span class="line" style="height: 100%"></span>
+            <span class="line" style="width: 96.5062%"></span>
+            <i class="icon icon-back-to-top"></i>
+            <!-- ? -->
+          </div>
+        </div>
+        <div class="bottom-content">
+          <div class="section message">
+            <div class="container">
+              <div class="section-box">
+                <div class="message-main">
+                  생명 존중 경영을 통해<br />사회적 책임을 다하고<br
+                    class="only-mo"
+                  />지속가능한 미래를 만들어갑니다.
+                </div>
+                <div class="strategy">
+                  JW중외제약은 혁신 신약 개발과 적극적인 글로벌 시작 확대를
+                  통해<br />생명존중을 실천하는 글로벌 제약기업으로 성장하고
+                  있습니다.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footer -->
+          <footer class="footer">
+            <div class="container">
+              <div class="footer-content">
+                <div class="footer-logo">
+                  <img
+                    src="img/section/logo-9c189adb26a0adce7113625d2e2a8235.svg"
+                    alt="동아제약"
+                    class="footer-logo-img"
+                  />
+                </div>
+                <div class="footer-sites only-pc">
+                  <div class="dropdown">
+                    <button
+                      aria-expanded="false"
+                      class="btn-dropdown js-btn-dropdown"
+                      type="button"
+                    >
+                      Brand Site
+                    </button>
+                    <div class="dropdown-opts dropdown-brnad js-dropdown-opts">
+                      <div class="dropdown-box">
+                        <dl>
+                          <dt>박카스</dt>
+                          <dd>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="#" class="link">박카스</a>
+                              </li>
+                            </ul>
+                          </dd>
+                          <dt>더마</dt>
+                          <dd>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="#" class="link">박카스</a>
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="dropdown-box">
+                        <dl>
+                          <dt>박카스</dt>
+                          <dd>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="#" class="link">박카스</a>
+                              </li>
+                            </ul>
+                          </dd>
+                          <dt>더마</dt>
+                          <dd>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="#" class="link">박카스</a>
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="dropdown-box">
+                        <dl>
+                          <dt>박카스</dt>
+                          <dd>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="#" class="link">박카스</a>
+                              </li>
+                            </ul>
+                          </dd>
+                          <dt>더마</dt>
+                          <dd>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="#" class="link">박카스</a>
+                              </li>
+                            </ul>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-content">
+                <div class="footer-info">
+                  <div class="footer-info-box">
+                    <ul class="footer-info-list">
+                      <li class="footer-info-item">00시 00구 000로 00</li>
+                      <li class="footer-info-item">02-840-6777</li>
+                      <li class="footer-info-item">대표이사: 신영섭</li>
+                      <li class="footer-info-item">
+                        사업자등록번호: 000-00-00000
+                      </li>
+                    </ul>
+                    <p class="copy">
+                      Copyright © JW중외제약 <br class="only-mo" />All rights
+                      reserved
+                    </p>
+                  </div>
+                  <div class="footer-info-box is-reverse">
+                    <a class="btn-donate" href="#">기부 문의</a>
+                    <ul class="certification-list">
+                      <li class="certification-item">
+                        <a href="#">
+                          <img
+                            class="only-pc"
+                            src="img/certification/img_certf1-444abd3c1fc83ac1e573b273ea726ef3.png"
+                            alt="cer-p"
+                          />
+                          <img
+                            class="only-mo"
+                            src="img/certification/img_certf_mo1-950d43bcba3e57c3f5a181a6cb4a4936.png"
+                            alt="cer-m"
+                          />
+                        </a>
+                      </li>
+                      <li class="certification-item">
+                        <a href="#">
+                          <img
+                            class="only-pc"
+                            src="img/certification/img_certf2-b4b37b0face2e7ae6c54ac4dae23be0f.png"
+                            alt="cer-p"
+                          />
+                          <img
+                            class="only-mo"
+                            src="img/certification/img_certf_mo2-c453a5ad18b50ddc1abc7f1a6fc2234d.png"
+                            alt="cer-m"
+                          />
+                        </a>
+                      </li>
+                      <li class="certification-item">
+                        <a href="#">
+                          <img
+                            class="only-pc"
+                            src="img/certification/img_certf3-9545d0b4a8c93807c8bbeebd87a693d0.png"
+                            alt="cer-p"
+                          />
+                          <img
+                            class="only-mo"
+                            src="img/certification/img_certf_mo3-a030b5135cc54dd497bc2ef68c612f2e.png"
+                            alt="cer-m"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-terms-link">
+                  <ul class="footer-terms-list">
+                    <li class="footer-terms-item">
+                      <a href="#">사이트 이용 약관</a>
+                    </li>
+                    <li class="footer-terms-item">
+                      <a href="#">법적 고지 안내</a>
+                    </li>
+                    <li class="footer-terms-item">
+                      <a href="#">개인 정보 처리 방침</a>
+                    </li>
+                    <li class="footer-terms-item">
+                      <a href="#">이메일 무단 수집 거부</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- 모바일 높이 조절인가 뭐지-->
+          <div
+            aria-hidden="true"
+            class="height-deviice-mo js-height-device"
+          ></div>
+          <!-- footer end-->
+        </div>
+      </main>
+      <!-- main end  -->
+
+      <!-- layer-gnb  -->
+      <div class="layer-gnb only-pc">
+        <div class="layer-gnb-logo">
+          <a href="#">
+            <img
+              src="img/section/logo-9c189adb26a0adce7113625d2e2a8235.svg"
+              alt="동아제약"
+            />
+          </a>
+        </div>
+        <div class="layer-gnb-inner">
+          <div class="layer-gnb-utility">
+            <ul class="utility-list">
+              <li class="utility-item">
+                <a href="#" class="link">
+                  <i class="icon icon-find-sale-white"></i>
+                  <span class="text">판매약국찾기</span>
+                </a>
+              </li>
+              <li class="utility-item">
+                <a href="#" class="link">
+                  <i class="icon icon-audit-report-white"></i>
+                  <span class="text">감사제보하기</span>
+                </a>
+              </li>
+              <li class="utility-item">
+                <a href="#" class="link js-open-layer-search">
+                  <i class="icon icon-find-product-white"></i>
+                  <span class="text">제품 통합 검색</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="chose-language">
+              <li class="chose-language-item">
+                <a href="#" class="link">KR</a>
+              </li>
+              <li class="chose-language-item">
+                <a href="#" class="link">EN</a>
+              </li>
+            </ul>
+          </div>
+          <div class="layer-gnb-main">
+            <!-- navigation -->
+            <ul class="layer-gnb-list">
+              <li class="layer-gnb-item">
+                <div class="layer-gnb-item-intro">
+                  <strong class="title">회사소개</strong>
+                </div>
+                <div class="layer-gnb-box-links">
+                  <div class="layer-gnb-item-col">
+                    <ul class="layer-gnb-list-link">
+                      <li class="item"><a href="#" class="link">인사말</a></li>
+                      <li class="item">
+                        <a href="#" class="link">기업개요</a>
+                      </li>
+                      <li class="item"><a href="#" class="link">연혁</a></li>
+                    </ul>
+                  </div>
+                  <div class="layer-gnb-item-col">
+                    <ul class="layer-gnb-list-link">
+                      <li class="item">
+                        <a href="#" class="link">생산시설</a>
+                        <ul class="layer-gnb-list-depth">
+                          <li class="depth-itme">
+                            <a href="#" class="depth-link">당진공장</a>
+                          </li>
+                          <li class="depth-itme">
+                            <a href="#" class="depth-link">천안공장</a>
+                          </li>
+                          <li class="depth-itme">
+                            <a href="#" class="depth-link">이천공장</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="layer-gnb-item-col">
+                    <ul class="layer-gnb-list-link">
+                      <li class="item">
+                        <a href="#" class="link">오시는 길</a>
+                        <ul class="layer-gnb-list-depth">
+                          <li class="depth-item">
+                            <a href="#" class="depth-lick">본사</a>
+                          </li>
+                          <li class="depth-item">
+                            <a href="#" class="depth-lick">연구소</a>
+                          </li>
+                          <li class="depth-item">
+                            <a href="#" class="depth-lick">공장</a>
+                          </li>
+                          <li class="depth-item">
+                            <a href="#" class="depth-lick">지점</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="layer-gnb-item">
+                <div class="layer-gnb-item-intro">
+                  <strong class="title">브랜드</strong>
+                </div>
+                <div class="layer-gnb-box-links">
+                  <div class="layer-gnb-item-col layer-gnb-itme-col-fix-width">
+                    <ul class="layer-gnb-list-link">
+                      <li class="item">
+                        <span class="link no-link">브랜드</span>
+                        <ul class="layer-gnb-list-depth">
+                          <li class="depth-item">
+                            <a href="#" class="depth-link">전체 브랜드</a>
+                          </li>
+                          <li class="depth-item">
+                            <a href="#" class="depth-link">대표 브랜드</a>
+                            <ul class="layer-gnb-list-depth">
+                              <li class="depth-item">
+                                <ul class="brand-list">
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/d22e74b73e364d4fbe906b2753149fc7.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/PPR_logo.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/44dc761493ca42609fdfc9fd4a27a99f.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/BNT_logo.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/OTM_logo.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/d7454eac0bb043bbaaf55c62caeab28e.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/GGD_logo.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/TPN_logo.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/24b2de57365047debba80bb94dd7d2af.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/6f91415c7bd24508bb4a9936cb4c52dc.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                  <li class="brand-item">
+                                    <a
+                                      href="#"
+                                      class="brand-link"
+                                      style="background: #030a8c"
+                                    >
+                                      <span
+                                        class="gnb-brand-img"
+                                        aria-label="Brand name"
+                                        style="
+                                          --url: url(/common/images/brand/6f91415c7bd24508bb4a9936cb4c52dc.svg);
+                                        "
+                                      ></span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="depth-item">
+                                <ul class="depth-list-col depth-list-col-row">
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#"
+                                      >일반의약품</a
+                                    >
+                                  </li>
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#">의약외품</a>
+                                  </li>
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#">의료기기</a>
+                                  </li>
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#"
+                                      >건강기능식품</a
+                                    >
+                                  </li>
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#">화장품</a>
+                                  </li>
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#">기타</a>
+                                  </li>
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#">혼합음료</a>
+                                  </li>
+                                  <li class="depth-list-col-item">
+                                    <a class="depth-link" href="#">식품</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="layer-gnb-item-col layer-gnb-item-col-type3">
+                    <ul class="layer-gnb-list-link">
+                      <li class="item">
+                        <a href="#" class="link">생산시설</a>
+                        <ul class="layer-gnb-list-depth">
+                          <li class="depth-itme">
+                            <a href="#" class="depth-link">당진공장</a>
+                          </li>
+                          <li class="depth-itme">
+                            <a href="#" class="depth-link">천안공장</a>
+                          </li>
+                          <li class="depth-itme">
+                            <a href="#" class="depth-link">이천공장</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="layer-gnb-item">
+                <div class="layer-gnb-item-intro">
+                  <strong class="title">R&D</strong>
+                </div>
+                <div class="layer-gnb-box-links">
+                  <div class="layer-gnb-item-col layer-gnb-item-col-style2">
+                    <ul class="layer-gnb-list-link">
+                      <li class="item">
+                        <a href="#" class="link">연구소 소개</a>
+                        <div class="layer-gnb-list-box">
+                          <ul class="layer-gnb-list-depth">
+                            <li class="depth-item">
+                              <a href="#" class="depth-link"
+                                >어린이 건강 연구센터</a
+                              >
+                            </li>
+                            <li class="depth-item">
+                              <a href="#" class="depth-link">더마 연구 센터</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="layer-gnb-item-col">
+                    <ul class="layer-gnb-list-link layer-gnb-list-row">
+                      <li class="item">
+                        <a href="#" class="link">연구 영역</a>
+                        <div class="layer-gnb-list-box js-scroll-section">
+                          <ul class="layer-gnb-list-depth">
+                            <li class="depth-item">
+                              <a href="#" class="depth-link"
+                                >소비자 중심 혁신</a
+                              >
+                            </li>
+                            <li class="depth-item">
+                              <a href="#" class="depth-link">소재 연구</a>
+                            </li>
+                            <li class="depth-item">
+                              <a href="#" class="depth-link">제형 연구</a>
+                            </li>
+                          </ul>
+                          <ul class="layer-gnb-list-depth">
+                            <li class="depth-item">
+                              <a href="#" class="depth-link">관능 연구</a>
+                            </li>
+                            <li class="depth-item">
+                              <a href="#" class="depth-link">분석 과학</a>
+                            </li>
+                            <li class="depth-item">
+                              <a href="#" class="depth-link">지속 가능</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="layer-gnb-btn-close js-layer-gnb-close is-active">
+          <i class="icon icon-hamburger icon-hamburger-black">
+            <span class="blind">Close Navigation</span>
+          </i>
+        </button>
+      </div>
+      <!-- layer-gnb end  -->
+
+      <!-- layer layer-search  -->
+      <!-- 나중에 js로 검색하는 어떤 걸 하나 보다
+       서치는 구현하지 않겠음 -->
+      <div class="layer layer-search" id="js-layer-search">
+        <div class="layer-dim"></div>
+        <div class="layer-content">
+          <div class="layer-search-box-inner">
+            <div class="layer-seach-form"></div>
+            <div class="layer-seach-content-scroll"></div>
+          </div>
+          <button class="btn-close-layer js-layer-btn-close only-pc">
+            <i class="icon icon-close-layer"></i>
+          </button>
+        </div>
+        <script></script>
+      </div>
+      <!-- layer layer-search end  -->
+    </div>
+  </body>
+</html>
