@@ -28,12 +28,277 @@
     <div class="skip"></div>
     <div class="wrap">
       <!-- header  -->
-      <!-- class: header-home is-dark is-pc is-scroll is-hidden 이 추가되면 기능하게 만들 것같음 -->
       <header class="header header-home is-dark is-pc is-scroll is-hidden">
         <div class="header-mask"></div>
-        <!-- class: only-pc is-background 추가 될 예장 -->
-        <div class="header-top"></div>
-        <div class="header-bottom"></div>
+        <div class="header-top only-pc is-background">
+          <ul class="header-utility-list">
+            <!-- 우측 최상단 유틸리티 -->
+            <li class="header-utility-item">
+              <a href="#" class="header-utility-link">판매약국찾기</a>
+            </li>
+            <li class="header-utility-item">
+              <a href="#" class="header-utility-link">자주묻는질문</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-bottom">
+          <h1 class="logo">
+            <a href="#" class="logo-link">
+              <img src="img/logo.png" alt="logo" class="logo-img" />
+            </a>
+          </h1>
+          <div class="header-bottom-center">
+            <div class="gnb">
+              <ul class="gnb-list">
+                <!-- data-min-height="270" 따로 자바스크립트에서 설정해서 주는 건가 -->
+                <li class="gnb-item" data-min-height="270">
+                  <a href="#" class="gnb-link no-link">회사소개</a>
+                  <!--  gnb depth -->
+                  <div class="gnb-depth">
+                    <div class="gnb-depth-wrap">
+                      <div class="gnb-depth-inner">
+                        <div class="gnb-depth-intro only-pc">
+                          <strong class="depth-intro-title">회사소개</strong>
+                          <span class="depth-intro-desc">
+                            스스로 만들어가는 건강한 일상<br />중외제약이 함께
+                            하겠습니다.
+                          </span>
+                        </div>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">인사말</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">기업소개</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">연혁</a>
+                          </li>
+                        </ul>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">생산시설</a>
+                            <ul class="gnb-depth2-list gnb-depth2-list-full">
+                              <li class="gnb-depth2-item">
+                                <a href="#" class="link">내용고형제생산라인</a>
+                              </li>
+                              <li class="gnb-depth2-item">
+                                <a href="#" class="link">무균주사제생산라인</a>
+                              </li>
+                              <li class="gnb-depth2-item">
+                                <a href="#" class="link"
+                                  >주사내용액제생산라인</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb-item" data-min-height="270">
+                  <a href="#" class="gnb-link no-link">지속가능경영</a>
+                  <!--  gnb depth -->
+                  <div class="gnb-depth">
+                    <div class="gnb-depth-wrap">
+                      <div class="gnb-depth-inner">
+                        <div class="gnb-depth-intro only-pc">
+                          <strong class="depth-intro-title"
+                            >자속가능경영</strong
+                          >
+                          <span class="depth-intro-desc">
+                            중외제약은 사회적 책임을 다하고<br />지속가능한
+                            미래를 만듭니다.
+                          </span>
+                        </div>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link"
+                              >환경적 지속가능성</a
+                            >
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link"
+                              >사회적 지속가능성</a
+                            >
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">지배구조</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb-item" data-min-height="270">
+                  <a href="#" class="gnb-link no-link">연구</a>
+                  <!--  gnb depth -->
+                  <div class="gnb-depth">
+                    <div class="gnb-depth-wrap">
+                      <div class="gnb-depth-inner">
+                        <div class="gnb-depth-intro only-pc">
+                          <strong class="depth-intro-title">연구</strong>
+                          <span class="depth-intro-desc">
+                            치료의 한계를 넘어<br />생명을 향한 가능성을 열고
+                            <br />세계를 향한 혁신을 이어갑니다.
+                          </span>
+                        </div>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">연구정책</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">연구센터</a>
+                            <ul class="gnb-depth2-list gnb-depth2-list-full">
+                              <li class="gnb-depth2-item">
+                                <a href="#" class="link">신약연구센터</a>
+                              </li>
+                              <li class="gnb-depth2-item">
+                                <a href="#" class="link">CMC연구센터</a>
+                              </li>
+                              <li class="gnb-depth2-item">
+                                <a href="#" class="link">C&C신약연구소</a>
+                              </li>
+                              <li class="gnb-depth2-item">
+                                <a href="#" class="link">JW Theriac</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">기반기술</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">파이프라인</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">연구 네트워크</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb-item" data-min-height="270">
+                  <a href="#" class="gnb-link no-link">제품</a>
+                  <!--  gnb depth -->
+                  <div class="gnb-depth">
+                    <div class="gnb-depth-wrap">
+                      <div class="gnb-depth-inner">
+                        <div class="gnb-depth-intro only-pc">
+                          <strong class="depth-intro-title">제품</strong>
+                          <span class="depth-intro-desc">
+                            소비자의 건강한 일상을 지켜온<br />중외제약의 제품을
+                            소개합니다.
+                          </span>
+                        </div>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">제품검색</a>
+                          </li>
+                        </ul>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">판매약국 찾기</a>
+                          </li>
+                        </ul>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">허가변경알림</a>
+                          </li>
+                        </ul>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link"
+                              >자주 묻는 질문</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb-item" data-min-height="270">
+                  <a href="#" class="gnb-link no-link">고객</a>
+                  <!--  gnb depth -->
+                  <div class="gnb-depth">
+                    <div class="gnb-depth-wrap">
+                      <div class="gnb-depth-inner">
+                        <div class="gnb-depth-intro only-pc">
+                          <strong class="depth-intro-title">고객</strong>
+                          <span class="depth-intro-desc">
+                            소비자를 먼저 생각하는 기업<br />중외제약입니다.
+                          </span>
+                        </div>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">CCM 소개</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">고객문의</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">지출보고 신청</a>
+                          </li>
+                        </ul>
+                        <ul class="gnb-depth-list gnb-depth-col">
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">찾아오시는 길</a>
+                          </li>
+                          <li class="gnb-depth-item">
+                            <a href="#" class="gnb-depth-link">제품개선사례</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="header-utility-mo only-mo">
+              <ul class="utility-list">
+                <li class="utility-item">
+                  <a href="#" class="link">
+                    <i class="icon ic_compliance"></i>
+                    Compliance
+                  </a>
+                </li>
+                <li class="utility-item">
+                  <a href="#" class="link">
+                    <i class="icon icon-find-sale"></i>
+                    판매약국찾기
+                  </a>
+                </li>
+                <li class="utility-item">
+                  <a href="#" class="link">
+                    <i class="icon icon-audit-report"></i>
+                    감사제보하기
+                  </a>
+                </li>
+                <li class="utility-item">
+                  <a href="#" class="link js-open-layer-search">
+                    <i class="icon icon-find-product"></i>
+                    제품 통합 검색
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 네비게이션 -->
+          <div class="header-bottom-right">
+            <div class="header-search"></div>
+            <div class="header-lang"></div>
+            <button
+              type="button"
+              class="btn btn-gnb js-btn-gnb"
+              aria-label="Toggle Navigation"
+            >
+              <i class="icon icon-hamburger icon-hamburger-black"></i>
+            </button>
+          </div>
+        </div>
       </header>
       <!-- header end  -->
 
@@ -87,11 +352,17 @@
                     >
                   </strong>
                   <h2 class="title">
-                    <span class="text animate-active" data-animate="slideInUp"
+                    <span
+                      class="text animate-active"
+                      data-animate="slideInUp"
+                      style="--i: 1"
                       >한계를 넘어서,</span
                     >
                     <span class="text only-pc">
-                      <span class="text animate-active" data-animate="slideInUp"
+                      <span
+                        class="text animate-active"
+                        data-animate="slideInUp"
+                        style="--i: 2"
                         >중외제약이</span
                       >
                     </span>
@@ -99,17 +370,25 @@
                       <span
                         class="text animate-active"
                         data-animate="slideInUp"
+                        style="--i: 3"
                       >
                         내일을 바꿉니다.
                       </span>
                     </span>
                     <span class="only-mo">
-                      <span class="text animate-active" data-animate="slideInUp"
+                      <span
+                        class="text animate-active"
+                        data-animate="slideInUp"
+                        style="--i: 4"
                         >중외제약이 내일을 바꿉니다.</span
                       >
                     </span>
                   </h2>
-                  <div class="link-animate-box animate-active">
+                  <div
+                    class="link-animate-box animate-active"
+                    data-animate="fadeInUp"
+                    style="--i: 4"
+                  >
                     <a
                       href="#"
                       class="link-animate-text link-animate-hover-black"
@@ -428,7 +707,7 @@
                 </strong>
                 <h2 class="title">
                   <span class="text">
-                    <span class="text animate-active">소비자읜 건강한</span>
+                    <span class="text animate-active">소비자의 건강한</span>
                   </span>
                   <span class="text">
                     <span class="text animate-active">일상에 함께 합니다</span>
@@ -541,12 +820,9 @@
                     동아제약 소식
                   </span>
                 </h2>
-                <div
-                  class="link-animate-box animate-active"
-                  data-animate="fadeInUp"
+                <a href="#" class="btn btn-view" data-animate="fadeInUp"
+                  >뉴스룸 더보기</a
                 >
-                  <a href="#" class="lick-animate-text">뉴스룸 더보기</a>
-                </div>
               </div>
               <div class="news-area">
                 <!-- swiper -->
@@ -562,7 +838,7 @@
             <!-- ? -->
           </div>
         </div>
-        <div class="bottom-content">
+        <div class="content-bottom">
           <div class="section message">
             <div class="container">
               <div class="section-box">
@@ -758,6 +1034,7 @@
       <!-- main end  -->
 
       <!-- layer-gnb  -->
+      <!-- 메뉴 팝업 -->
       <div class="layer-gnb only-pc">
         <div class="layer-gnb-logo">
           <a href="#">

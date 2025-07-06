@@ -1,36 +1,5 @@
 @charset "utf-8";
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  /* font움직임을 부드럽게 하기위함  */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-html,
-body {
-  height: 100%;
-  font-family: Pretendard, "나눔바른고딕", "Nanum BarunGothic", "Malgun Gothic",
-    "맑은고딕", "Apple SD Gothic Neo", Dotum, "돋움", sans-serif;
-  color: #212121;
-}
-
-img {
-  vertical-align: middle;
-  border: 0;
-}
-a {
-  display: block;
-  text-decoration: none;
-  color: #212121;
-}
-ul,
-ol,
-li {
-  list-style: none;
-}
-
 /* Pretendard */
 @font-face {
   font-family: "Pretendard";
@@ -90,4 +59,166 @@ li {
       format("woff"),
     url("/font/Pretendard-ExtraBold.subset-fe00650272b3a983e6f10c9b8600946a.woff2")
       format("woff2");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font움직임을 부드럽게 하기위함  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  height: 100%;
+  font-family: Pretendard, "나눔바른고딕", "Nanum BarunGothic", "Malgun Gothic",
+    "맑은고딕", "Apple SD Gothic Neo", Dotum, "돋움", sans-serif;
+  color: #212121;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #212121;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+button {
+  overflow: visible;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* ========================================== */
+.skip {
+  height: 0;
+}
+
+/* 모바일,  pc */
+.only-pc {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .only-pc {
+    display: none !important;
+  }
+}
+.only-mo {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .only-mo {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .center-mo {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .right-mo {
+    text-align: right;
+  }
+}
+/* link */
+.no-link {
+  pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  .no-link-pc {
+    pointer-events: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .no-link-mo {
+    pointer-events: none;
+  }
+}
+
+.link-animate-box {
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+@media screen and (max-width: 1365px) {
+  .link-animate-box {
+    margin-top: 30px;
+    margin-top: 2.19619vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .link-animate-box {
+    margin-top: 12px;
+  }
+}
+.link-animate-text {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: #212121;
+  transition: color 0.2s;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+@media screen and (max-width: 1365px) {
+  .link-animate-text {
+    padding-bottom: 6px;
+    padding-bottom: 0.43924vw;
+    font-size: 16px;
+    font-size: 1.1713vw;
+    line-height: 19px;
+    line-height: 1.39092vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .link-animate-text {
+    padding-bottom: 3px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+}
+/* data-animate */
+[data-animate="fadeInUp"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition-delay: calc(var(--i, 0) * 0.1s);
+  -webkit-transform: translateY(50px);
+  -webkit-transition-delay: calc(var(--i, 0) * 0.14);
+}
+.animate-active[data-animate="fadeInUp"] {
+  animation-name: fadeInUp;
+}
+
+@keyframe fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-animate="slideInUp"] {
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
+  transition-delay: calc(var(--i, 0) * 0.1s);
+}
+.animate-active[data-animate="slideInUp"] {
+  transform: translateY(0);
 }

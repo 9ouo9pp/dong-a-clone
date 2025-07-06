@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+.main {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  display: block;
+}
+/* 공통 main-title================================================================= ====================== */
+.main-title {
+  position: relative;
+  z-index: 2;
+  padding-right: 60px;
+}
+@media screen and (max-width: 1365px) {
+  .main-title {
+    padding-right: 60px;
+    padding-right: 4.39239vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-title {
+    padding-right: 0;
+  }
+}
+.main-title .sub-title {
+  display: block;
+  overflow: hidden;
+  color: #0079fa;
+  letter-spacing: 8px;
+}
+.main-title .sub-title .text {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  content: attr(data-text);
+}
+@media screen and (max-width: 1355px) {
+  .main-title .sub-title .text {
+    letter-spacing: 8px;
+    letter-spacing: 0.5865vw;
+    font-size: 0.95168vw;
+    line-height: 1.15;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-title .sub-title .text {
+    letter-spacing: 5px;
+    font-size: 13px;
+    line-height: 1.15;
+  }
+}
+.main-title .title {
+  display: block;
+  margin-top: 20px;
+  font-size: 0;
+  color: #212121;
+}
+@media screen and (max-width: 768px) {
+  .main-title .title {
+    margin-top: 20px;
+    margin-top: 1.46413vw;
+  }
+}
+.main-title .text {
+  display: block;
+  overflow: hidden;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 73px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 1355px) {
+  .main-title .text {
+    font-size: 56px;
+    font-size: 4.09956vw;
+    line-height: 73px;
+    line-height: 5.34407vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-title .text {
+    font-size: 32px;
+    line-height: 1.38vw;
+  }
+}
+.main-title .desc {
+  margin-top: 30px;
+  font-size: 24xp;
+  font-weight: 700;
+  line-height: 40px;
+  color: #212121;
+}
+@media screen and (max-width: 1355px) {
+  .main-title .desc {
+    margin-top: 30px;
+    margin-top: 2.19619vw;
+    font-size: 24px;
+    font-size: 4.75695vw;
+    line-height: 40px;
+    line-height: 2.92826vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-title .desc {
+    margin-top: 13px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.main-title .btn-view {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #212121;
+}
+@media screen and (max-width: 768px) {
+  .main-title .btn-view {
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.08;
+  }
+}
+/* ======================================================= */
+/* main-content */
+.main-content {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+
+/* 1.visual */
+.visual {
+  position: relative;
+  height: calc(var(7.84px, 1vh) * 100);
+  width: 100%;
+}
+.visual-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.visual .swiper {
+  height: 100%;
+}
+/* 1.visual end */
+
+/* 2.key-info */
+.key-info {
+  position: relative;
+  z-index: 3;
+  padding-top: 160pc;
+  background: #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-box {
+  display: flex;
+}
+/* 왼쪽 제목부분 */
+.key-info .main-title {
+  margin-right: 80px;
+}
+.key-info .sub-title {
+}
+.key-info .title {
+}
+.key-info .title .text {
+}
+
+/* 왼쪽 제목부분 끝 */
+/* 내용 부분 */
+/* 다음에 여기서부터 시작============================================================== */
+.section-col-right {
+}
+/* 내용 부분 끝 */
+/* 2.key-info end */
+
+/* 3.lab */
+.lab {
+  position: relative;
+  z-index: 3;
+  pad: 156px 0 160px;
+  background: #fff;
+}
+/* 3.lab end */
+
+/* 4.intro lab */
+.intro-lab {
+  padding: 200px 0;
+}
+/* 4.intro lab end */
+
+/* 5.main-brand */
+.main-brand {
+  position: relative;
+  overflow: hidden;
+  padding: 180px 0 260px;
+  transition: background 1.2s ease-in;
+  transition-delay: 150ms;
+  color: #fff;
+  text-align: center;
+}
+/* 5.main-brand  end*/
+
+/* 6.business */
+.business-philosophy {
+  padding: 200px 0 120px;
+}
+/* 6.business end */
+
+/* 7.news */
+.news {
+  overflow: hidden;
+  padding: 160px 0 200px;
+}
+/* 7.news end */
+
+/* 8.backtotop */
+.back-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 34px;
+  width: 56px;
+  height: 56px;
+  z-index: 9;
+  display: none;
+}
+/* 8.backtotop end */
+
+/* main-content end */
+
+/* content-bottom */
+.content-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+/* content-bottom ena */
