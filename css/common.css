@@ -103,33 +103,6 @@ button {
   height: 0;
 }
 
-/* 모바일,  pc */
-.only-pc {
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .only-pc {
-    display: none !important;
-  }
-}
-.only-mo {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .only-mo {
-    display: none !important;
-  }
-}
-@media screen and (min-width: 768px) {
-  .center-mo {
-    text-align: left;
-  }
-}
-@media screen and (min-width: 768px) {
-  .right-mo {
-    text-align: right;
-  }
-}
 /* link */
 .no-link {
   pointer-events: none;

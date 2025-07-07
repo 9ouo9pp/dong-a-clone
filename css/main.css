@@ -1,5 +1,34 @@
 @charset "utf-8";
 
+/* 모바일,  pc */
+.only-pc {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .only-pc {
+    display: none !important;
+  }
+}
+.only-mo {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .only-mo {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .center-mo {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .right-mo {
+    text-align: right;
+  }
+}
+/* 모바일,  pc end*/
+
 .main {
   position: relative;
   z-index: 2;
@@ -154,9 +183,157 @@
   bottom: 0;
   z-index: 0;
 }
+
 .visual .swiper {
   height: 100%;
 }
+
+.visual-content {
+  position: absolute;
+  left: 160px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.visual .swiper-slide.is-right .visual-content {
+  position: absolute;
+  right: 160px;
+  right: 11.71303vw;
+  left: auto;
+}
+.swiper-slide.is-left .visual-content {
+  left: 160px;
+  right: auto;
+}
+.visual .swiper-slide.is-bottom .visual-content {
+  bottom: 192px;
+  bottom: 14.05564vw;
+  top: auto;
+}
+.visual .swiper-slide.is-top .visual-content {
+  top: 182px;
+  bottom: auto;
+}
+.visual .swiper-slide.is-text-right .visual-content {
+  text-align: right;
+}
+.visual .swiper-slide .visual-content {
+  top: auto;
+  bottom: 192px;
+  color: #fff;
+  max-width: calc(100% - 320px);
+}
+/* 여기서 부터 sub-title어디갔는지 찾기 =================================================*/
+.visual-content .sub-title {
+  display: block;
+  overflow: hidden;
+}
+.visual-content .sub-title .text {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  line-height-step: 8px;
+  transform: translateY(100%);
+  transition: transform 0.75s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.visual .title {
+  display: block;
+  margin-top: 20px;
+}
+.visual-content .text {
+  display: block;
+  overflow: hidden;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.3;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+  transition-delay: calc(var(--i) * 0.1s);
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 1600px) {
+  .visual .swiper-slide.isright .visual-content {
+    right: 160px;
+    right: 11.71303vw;
+  }
+}
+@media screen and (max-width: 1356px) {
+  .visual-content {
+    left: 160px;
+    left: 11.71303vw;
+    max-width: 689px;
+    max-width: 50.21962vw;
+    font-size: 40px;
+    font-size: 2.92826vw;
+  }
+  .visual .swiper-slide.is-right .visual-content {
+    right: 160px;
+    right: 11.71303vw;
+  }
+  .visual .swiper-slide.is-bottom .visual-content {
+    bottom: 192px;
+    bottom: 14.05564vw;
+  }
+  .visual .swiper-slide.is-top .visual-content {
+    top: 182px;
+    top: 13.32357vw;
+  }
+
+  .visual-content .sub-title .text {
+    font-size: 20px;
+    font-size: 1.46413vw;
+    line-height: 24px;
+    line-height: 1.75695vw;
+    letter-spacing: 8px;
+    letter-spacing: 0.58565vw;
+    color: #fff;
+  }
+  .visual .title {
+    margin-top: 20px;
+    margin-top: 1.46413vw;
+  }
+  .visual-content .text {
+    font-size: 80px;
+    font-size: 5.85652vw;
+    line-height: 101px;
+    line-height: 7.39385vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .visual-content {
+    top: 105px;
+    left: 24px;
+    max-width: calc(100% - 48px);
+  }
+  .visual .swiper-slide.is-right .visual-content {
+    right: 24px;
+  }
+  .visual .swiper-slide.is-bottom .visual-content {
+    bottom: 148px;
+  }
+  .visual .swiper-slide.is-top .visual-content {
+    top: 145px;
+  }
+  .visual-content .sub-title .text {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 5.2px;
+  }
+  .visual .title {
+    margin-top: 20px;
+  }
+  .visual-content .text {
+    font-size: 32px;
+    line-height: 46px;
+  }
+}
+
 /* 1.visual end */
 
 /* 2.key-info */
@@ -209,9 +386,20 @@
 .key-info .statistic-item:nth-child(2n + 2) {
   padding-left: 25px;
 }
-/* 여기서 부터 작성
-======================================================= */
 .key-info .statistic-title {
+  font-size: 18px;
+  line-height: 19px;
+  color: #757575;
+}
+.key-info .statistic-detail {
+  margin-top: 12px;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 84px;
+  color: #212121;
+}
+.key-info .statistic-detail .unit {
+  font-size: 48px;
 }
 @media screen and (max-width: 1365px) {
   .key-info .key-info-desc {
@@ -235,6 +423,24 @@
     padding-left: 25px;
     padding-left: 1.83016vw;
   }
+  .key-info .statistic-title {
+    font-size: 18px;
+    font-size: 1.31772vw;
+    line-height: 19px;
+    line-height: 1.39092vw;
+  }
+  .key-info .statistic-detail {
+    margin-top: 12px;
+    margin-top: 0.87848vw;
+    font-size: 80px;
+    font-size: 5.85652vw;
+    line-height: 84px;
+    line-height: 6.14934vw;
+  }
+  .key-info .statistic-detail .unit {
+    font-size: 48px;
+    font-size: 3.51391vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .key-info .key-info-desc {
@@ -252,6 +458,14 @@
   }
   .key-info .statistic-item:nth-child(2n + 2) {
     padding-left: 0;
+  }
+  .key-info .statistic-title {
+    font-size: 14px;
+    line-height: 17px;
+    word-break: keep-all;
+  }
+  .key-info .statistic-detail .unit {
+    font-size: 24px;
   }
 }
 /* 내용 부분 끝 */
