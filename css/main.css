@@ -6,7 +6,7 @@
   background: #fff;
   display: block;
 }
-/* 공통 main-title================================================================= ====================== */
+/* 공통 main-title======================================================================================= */
 .main-title {
   position: relative;
   z-index: 2;
@@ -186,8 +186,73 @@
 
 /* 왼쪽 제목부분 끝 */
 /* 내용 부분 */
-/* 다음에 여기서부터 시작============================================================== */
 .section-col-right {
+}
+.key-info .key-info-desc {
+  margin-top: 50px;
+  font-size: 20px;
+  line-height: 32px;
+  color: #757575;
+  word-break: keep-all;
+}
+.key-info .statistic-list {
+  display: flex;
+  font-weight: wrap;
+  margin-top: 40px;
+}
+.key-info .statistic-item {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  margin-top: 80px;
+}
+.key-info .statistic-item:nth-child(2n + 2) {
+  padding-left: 25px;
+}
+/* 여기서 부터 작성
+======================================================= */
+.key-info .statistic-title {
+}
+@media screen and (max-width: 1365px) {
+  .key-info .key-info-desc {
+    margin-top: 53px;
+    margin-top: 3.87994vw;
+    font-size: 20px;
+    font-size: 1.46413vw;
+    line-height: 32px;
+    line-height: 2.34261vw;
+  }
+  .key-info .statistic-list {
+    margin-top: 40px;
+    margin-top: 2.92826vw;
+  }
+  .key-info .statistic-item {
+    margin-top: 80px;
+    margin-top: 5.85652vw;
+    transform: auto;
+  }
+  .key-info .statistic-item:nth-child(2n + 2) {
+    padding-left: 25px;
+    padding-left: 1.83016vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .key-info .key-info-desc {
+    margin-top: 53px;
+    font-size: 15px;
+    line-height: 24px;
+    padding-left: 24px;
+  }
+  .key-info .statistic-list {
+    margin-top: 20px;
+  }
+  .key-info .statistic-item {
+    margin-top: 38px;
+    justify-content: space-between;
+  }
+  .key-info .statistic-item:nth-child(2n + 2) {
+    padding-left: 0;
+  }
 }
 /* 내용 부분 끝 */
 /* 2.key-info end */
