@@ -629,6 +629,29 @@
 .intro-lab {
   padding: 200px 0;
 }
+.intro-lab .container {
+  position: relative;
+}
+.intro-lab .main-title {
+  position: absolute;
+}
+.intro-lab .intro-lab-box-slide {
+  display: flex;
+}
+.intro-lab .swiper-intro-lab-txt {
+  align-self: flex-end;
+  width: 291px;
+  margin: 0 0 47px;
+}
+.intro-lab .swiper-sldie {
+  height: auto;
+  background: #fff;
+}
+.intro-lab .swiper-intro-lab-box {
+  position: relative;
+  margin-left: auto;
+  padding-left: 28px;
+}
 /* 4.intro lab end */
 
 /* 5.main-brand */

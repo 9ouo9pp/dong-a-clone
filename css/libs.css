@@ -16,7 +16,9 @@ body {
   z-index: 1;
   display: block;
 }
-
+.swiper-horizontal {
+  touch-action: pan-y;
+}
 .swiper-wrapper {
   position: relative;
   width: 100%;
@@ -82,4 +84,13 @@ body {
 /* 순차 등장용 */
 .visual-content .tex {
   transition-delay: calc(var(--i) * 0.1s);
+}
+
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
