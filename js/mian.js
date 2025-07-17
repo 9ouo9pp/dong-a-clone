@@ -49,3 +49,24 @@ gsap.utils.toArray(".js-lab-item").forEach((item, index, array) => {
         },
     });
 });
+
+
+// 섻션에 들어오면 fadeinup활성화
+// 모든 section을 순회
+document.querySelectorAll("section").forEach((section) => {
+    // 해당 섹션 내부에 data-animate="fadeInUp" 요소가 있는지 확인
+    const targets = section.querySelectorAll('[data-animate="fadeInUp"]');
+    if (targets.length === 0) return; // 없으면 무시
+
+    ScrollTrigger.create({
+        trigger: section,
+        start: "top 80%",
+        onEnter: () => {
+            targets.forEach((el) => el.classList.add("animate-active"));
+        },
+        // 필요하다면 아래 주석 해제:
+        // onLeaveBack: () => {
+        //   targets.forEach((el) => el.classList.remove("animate-active"));
+        // },
+    });
+});

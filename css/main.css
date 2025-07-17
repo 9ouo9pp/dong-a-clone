@@ -167,6 +167,7 @@
   position: relative;
   z-index: 2;
   background: #fff;
+  /* outline: 3px solid red; */
 }
 
 /* 1.visual */
@@ -627,7 +628,13 @@
 
 /* 4.intro lab */
 .intro-lab {
+  position: relative;
   padding: 200px 0;
+  /* background: #fff; */
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  background-color: #fff; /* 여기가 빠져 있었음 */
 }
 .intro-lab .container {
   position: relative;
@@ -643,14 +650,73 @@
   width: 291px;
   margin: 0 0 47px;
 }
-.intro-lab .swiper-sldie {
+.intro-lab .swiper-slide {
   height: auto;
   background: #fff;
+}
+.intro-lab .intro-lab-content .title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #212121;
+}
+.intro-lab .intro-lab-content .desc {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #757575;
 }
 .intro-lab .swiper-intro-lab-box {
   position: relative;
   margin-left: auto;
   padding-left: 28px;
+}
+.intro-lab .swiper-slide {
+  height: auto;
+  background: #fff;
+}
+.intro-lab .swiper-intro-lab {
+  width: 792px;
+}
+.intro-lab .swiper-slide-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.intro-lab .intro-lab-image {
+  position: relative;
+  overflow: hidden;
+  max-width: 792px;
+  padding-top: 70%;
+  flex: 1;
+}
+.intro-lab .intro-lab-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.intro-lab .group-btn {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  z-index: 2;
+}
+.intro-lab .btn-intro-lab {
+  width: 56px;
+  height: 56px;
+  background-image: url("../img/section/icons-svg-e728b9e1897e258e70755f4eb15bc40b.svg");
+  background-size: 1513px 1470px;
+  background-position: -1448.24px -136px;
+  background-repeat: no-repeat;
+}
+.intro-lab .btn-intro-lab-prev {
+  margin-top: -1px;
+  transform: rotateY(180deg);
+  transform-origin: 0 0;
 }
 /* 4.intro lab end */
 
@@ -668,7 +734,35 @@
 
 /* 6.business */
 .business-philosophy {
+  position: relative;
   padding: 200px 0 120px;
+  background: #fff;
+}
+.business-philosophy .main-title {
+  margin-right: -320px;
+  padding-top: 100px;
+}
+.business-philosophy .business-philosophy-content {
+  display: flex;
+}
+.business-philosophy .txt-box {
+  pad: 144px 0 0 120px;
+}
+.business-philosophy .txt-mission {
+  margin-bottom: 24px;
+  font-size: 26px;
+  line-height: 35px;
+  color: #212121;
+  word-break: keep-all;
+}
+.business-philosophy .txt-other-info {
+  font-size: 18px;
+  line-height: 28px;
+  color: #757575;
+  word-break: keep-all;
+}
+.business-philosophy .txt-other-info:not(:last-child) {
+  margin-bottom: 24px;
 }
 /* 6.business end */
 
@@ -701,4 +795,4 @@
   bottom: 0;
   z-index: 1;
 }
-/* content-bottom ena */
+/* content-bottom end */

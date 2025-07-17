@@ -1,15 +1,15 @@
 // 첫 번째 슬라이더(텍스트)
-var swiperTxt = new Swiper(".swiper-intro-lab-txt", {
+const swiperTxt = new Swiper(".swiper-intro-lab-txt", {
   speed: 500,
   allowTouchMove: false // 텍스트 swiper는 보통 드래그 비활성화
 });
 
 // 두 번째 슬라이더(이미지)
-var swiperImg = new Swiper(".swiper-intro-lab-img", {
+const swiperImg = new Swiper(".swiper-intro-lab", {
   speed: 500,
   navigation: {
-    nextEl: ".group-btn .swiper-button-next",
-    prevEl: ".group-btn .swiper-button-prev"
+    nextEl: ".group-btn .btn-intro-lab-next",
+    prevEl: ".group-btn .btn-intro-lab-prev"
   }
 });
 

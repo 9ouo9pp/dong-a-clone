@@ -165,18 +165,28 @@ button {
   }
 }
 /* data-animate */
-[data-animate="fadeInUp"] {
+/* [data-animate="fadeInUp"] {
   opacity: 0;
   transform: translateY(50px);
   transition-delay: calc(var(--i, 0) * 0.1s);
   -webkit-transform: translateY(50px);
   -webkit-transition-delay: calc(var(--i, 0) * 0.14);
-}
+} */
 .animate-active[data-animate="fadeInUp"] {
   animation-name: fadeInUp;
 }
 
-@keyframe fadeInUp {
+@keyframes fadeInUp100 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
   0% {
     opacity: 0;
     transform: translateY(50px);
