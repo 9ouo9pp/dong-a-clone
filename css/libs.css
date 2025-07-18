@@ -94,3 +94,115 @@ body {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
+
+/* brand =======================================================*/
+.brand-swiper {
+  width: 100%;
+  height: 100%;
+}
+.brand-swiper .swiper-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #444;
+  width: auto;
+  flex-shrink: 0;
+}
+.main-brand .swiper-slide .slide-content {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  margin: 0 12px;
+  text-align: center;
+}
+/* 비활성 상태: 로고를 슬라이드 중앙에 완전 고정 */
+.swiper-slide:not(.swiper-slide-active) {
+  justify-content: center; /* 세로 중앙 정렬 */
+}
+.brand-img-product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  opacity: 0;
+  scale: 0.8;
+  transform-origin: center center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+
+  overflow: hidden;
+}
+.brand-img-product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+/* 제품 이미지가 나올 때는 보이도록 */
+.swiper-slide-active .brand-img-product {
+  opacity: 1;
+  scale: 1;
+  pointer-events: auto;
+}
+/* 로고 기본 스타일 */
+.brand-img-logo {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 208px;
+  height: 104px;
+  top: 50%;
+  transform: translateY(-50);
+
+  color: var(--gray4-, #4a4f55);
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: normal;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+/* 비활성 슬라이드일 때는 로고를 슬라이드 중앙에 띄우기 위해 절대 위치 조정 */
+.swiper-slide:not(.swiper-slide-active) .brand-img-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+/* 활성 슬라이드일 땐 상대 위치로 돌아가서 이미지 아래로 내려감 */
+.swiper-slide-active .brand-img-logo {
+  position: relative;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  margin-top: 10px; /* 이미지와 로고 사이 간격 */
+  z-index: 1;
+}
+/* brand end================================================== */
+
+/* news======================================================= */
+.swiperNews {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperNews .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperNews .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* news end======================================================= */

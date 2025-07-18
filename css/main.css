@@ -729,7 +729,24 @@
   transition-delay: 150ms;
   color: #fff;
   text-align: center;
+  background: #fff;
 }
+
+/* 초기 상태 - 모든 슬라이드에 공통 */
+.brand-img-product,
+.brand-img-logo {
+  will-change: transform, opacity;
+}
+
+.brand-img-product {
+  transform: translateY(50px) scale(0.8);
+  opacity: 0;
+}
+
+.brand-img-logo {
+  transform: translateY(0);
+}
+
 /* 5.main-brand  end*/
 
 /* 6.business */
@@ -737,6 +754,11 @@
   position: relative;
   padding: 200px 0 120px;
   background: #fff;
+}
+.business-philosophy img {
+  width: 486px;
+  height: 840px;
+  object-fit: cover;
 }
 .business-philosophy .main-title {
   margin-right: -320px;
@@ -746,7 +768,7 @@
   display: flex;
 }
 .business-philosophy .txt-box {
-  pad: 144px 0 0 120px;
+  padding: 144px 0 0 120px;
 }
 .business-philosophy .txt-mission {
   margin-bottom: 24px;
@@ -768,9 +790,23 @@
 
 /* 7.news */
 .news {
+  position: relative;
   overflow: hidden;
   padding: 160px 0 200px;
+  background: #fff;
 }
+.news .news-area {
+  margin-top: 56px;
+}
+.news .swiperNews {
+  overflow: visible;
+}
+.news .swiperNews .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
 /* 7.news end */
 
 /* 8.backtotop */
