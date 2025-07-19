@@ -1,36 +1,25 @@
-// var r = jQuery;
-
-// function a() {
-//     var s;
-//     0 != r(".js-lab-item").length &&
-//         (r(n).scrollTop() + r(n).innerHeight() >= r(".lab-list").offset().top + 200 && r(".js-lab-item").eq(0).addClass("active"),
-//             (s = r(".header").innerHeight() - r(".js-lab-item").eq(0).find("img").innerHeight() / 0.75),
-//             r(".js-lab-item").each(function (e) {
-//                 0 < e &&
-//                     ((e = (0 < r(".js-lab-item.active").length ? r(".js-lab-item.active").eq(r(".js-lab-item.active").length - 1) : r(".js-lab-item.active").eq(0)).index()),
-//                         r(".js-lab-item").eq(e)[0].getBoundingClientRect().top < 0 &&
-//                         r(".js-lab-item").eq(e)[0].getBoundingClientRect().top >= s &&
-//                         ((s =
-//                             r(".header").innerHeight() -
-//                             r(".js-lab-item")
-//                                 .eq(e + 1)
-//                                 .find("img")
-//                                 .innerHeight() /
-//                             3),
-//                             r(".js-lab-item")
-//                                 .eq(e + 1)
-//                                 .addClass("active")),
-//                         0 < r(".js-lab-item").parents(".page-lab-list").length) &&
-//                     r(".js-lab-item:nth-last-of-type(2)").hasClass("active") &&
-//                     setTimeout(function () {
-//                         r(".js-lab-item:last-child").addClass("active");
-//                     }, 300);
-//             }));
-// }
-
-
-// GSAP 플러그인 등록
 gsap.registerPlugin(ScrollTrigger);
+
+// visual position 변경=========================================================================
+
+ScrollTrigger.create({
+    trigger: "#visual",
+    start: "top top",
+    end: "bottom top", // visual의 끝이 화면의 top에 닿을 때까지
+    onLeave: () => {
+        document.querySelector(".visual-inner").style.position = "absolute";
+        document.querySelector(".visual-inner").style.top = "100%";
+    },
+    onEnterBack: () => {
+        document.querySelector(".visual-inner").style.position = "fixed";
+        document.querySelector(".visual-inner").style.top = "0";
+    },
+});
+
+// visual position 변경 end=========================================================================
+
+
+// lab item 나타나게 하기============================================================================
 
 // .js-lab-item 각각에 대해 ScrollTrigger 적용
 gsap.utils.toArray(".js-lab-item").forEach((item, index, array) => {
@@ -50,6 +39,10 @@ gsap.utils.toArray(".js-lab-item").forEach((item, index, array) => {
     });
 });
 
+// lab item 나타나게 하기 end============================================================================
+
+
+// fadeinup gsap============================================================================
 
 // 섻션에 들어오면 fadeinup활성화
 // 모든 section을 순회
@@ -70,3 +63,24 @@ document.querySelectorAll("section").forEach((section) => {
         // },
     });
 });
+
+// fadeinup gsap end============================================================================
+
+
+// lab===========================================================
+
+ScrollTrigger.create({
+    trigger: ".main-brand",
+    start: "top center", // #lab의 top이 화면의 중앙에 닿을 때
+    onEnter: () => {
+        console.log("#lab entered center viewport");
+        document.querySelector(".main-brand").classList.add("change-bg");
+    },
+    onLeaveBack: () => {
+        console.log("#lab center viewport");
+        document.querySelector(".main-brand").classList.remove("change-bg");
+    },
+});
+
+
+// lab end===========================================================

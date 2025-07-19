@@ -19,8 +19,11 @@
     <!-- css -->
     <link rel="stylesheet" href="css/libs.css" />
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <!-- js -->
+    <script src="js/header.js" defer></script>
     <script src="js/mian.js" defer></script>
     <script src="js/libs/swiper.js" defer></script>
     <script src="js/libs/swiperLabIntro.js" defer></script>
@@ -34,7 +37,10 @@
     <div class="skip"></div>
     <div class="wrap">
       <!-- header  -->
-      <header class="header header-home is-dark is-pc is-scroll is-hidden">
+      <header
+        class="header is-transparent header-home is-dark is-pc is-scroll"
+        style="transform: translateY(0px); --color: #212121"
+      >
         <div class="header-mask"></div>
         <div class="header-top only-pc is-background">
           <ul class="header-utility-list">
@@ -60,7 +66,7 @@
                 <li class="gnb-item" data-min-height="270">
                   <a href="#" class="gnb-link no-link">회사소개</a>
                   <!--  gnb depth -->
-                  <div class="gnb-depth">
+                  <div class="gnb-depth" style="height: 0">
                     <div class="gnb-depth-wrap">
                       <div class="gnb-depth-inner">
                         <div class="gnb-depth-intro only-pc">
@@ -817,9 +823,7 @@
               </div>
             </div>
           </section>
-          <section
-            class="section main-brand js-section-main-brnad is-change-bg"
-          >
+          <section class="section main-brand js-section-main-brnad">
             <div class="brand-wrap">
               <div class="main-title">
                 <strong class="sub-title">
@@ -1312,7 +1316,7 @@
           </div>
         </div>
         <div class="content-bottom">
-          <div class="section message">
+          <section class="section section-message">
             <div class="container">
               <div class="section-box">
                 <div class="message-main">
@@ -1327,7 +1331,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <!-- footer -->
           <footer class="footer">
             <div class="container">
@@ -1369,7 +1373,7 @@
                           </dd>
                         </dl>
                       </div>
-                      <div class="dropdown-box">
+                      <div class="dropdown-box dropdown-box-style2">
                         <dl>
                           <dt>박카스</dt>
                           <dd>

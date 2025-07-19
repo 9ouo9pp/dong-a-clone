@@ -173,7 +173,8 @@
 /* 1.visual */
 .visual {
   position: relative;
-  height: calc(var(7.84px, 1vh) * 100);
+  /* height: calc(var(7.84px, 1vh) * 100); */
+  height: 100vh;
   width: 100%;
 }
 .visual-inner {
@@ -477,7 +478,7 @@
 .lab {
   position: relative;
   z-index: 3;
-  pad: 156px 0 160px;
+  padding: 156px 0 160px;
   background: #fff;
 }
 .lab .section-box {
@@ -631,7 +632,8 @@
   position: relative;
   padding: 200px 0;
   /* background: #fff; */
-  height: 100vh;
+  /* height: 100vh; */
+  height: auto;
   display: flex;
   /* align-items: center; */
   background-color: #fff; /* 여기가 빠져 있었음 */
@@ -727,11 +729,29 @@
   padding: 180px 0 260px;
   transition: background 1.2s ease-in;
   transition-delay: 150ms;
+  /* background: #fff; */
+  background: #137abd;
+}
+.main-brand span {
   color: #fff;
   text-align: center;
-  background: #fff;
 }
-
+.main-brand.change-bg {
+  position: relative;
+  background: #137abd;
+}
+.main-brand.change-bg::after {
+  content: "";
+  position: absolute; /* 위치 지정 가능하게 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* 부모 전체 덮기 */
+  background: url("../img/section/Vector4.png") center no-repeat;
+  background-size: contain; /* 이미지 크기 조절 */
+  pointer-events: none; /* 마우스 이벤트 방해하지 않게 */
+  /* z-index: 1; */
+}
 /* 초기 상태 - 모든 슬라이드에 공통 */
 .brand-img-product,
 .brand-img-logo {
@@ -805,8 +825,28 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  border-radius: 20px;
+  overflow: hidden;
 }
-
+.news .news-content {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.news .news-content div {
+  text-indent: 0; /* 들여쓰기 없애기 */
+}
+.news .news-content div:first-child {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 /* 7.news end */
 
 /* 8.backtotop */
@@ -822,13 +862,3 @@
 /* 8.backtotop end */
 
 /* main-content end */
-
-/* content-bottom */
-.content-bottom {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-/* content-bottom end */
