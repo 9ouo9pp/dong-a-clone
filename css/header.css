@@ -5,36 +5,26 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 101;
   transform: translateY(0);
   transition: transform 0.4s ease;
-  background-color: red;
+
+  /* overflow: hidden; */
+  /* background-color: red; */
 }
 
-.header.is-hidden {
-  transform: translateY(-100%);
-}
-
-.header-home:not(.is-change-me) {
-  background: transparent;
-}
-.header.is-transparent {
-  background: transparent;
-}
-.header.is-transparent .header-top {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
-.header.is-transparent.is-dark .header-top {
-  border-color: rgba(33, 33, 33, 0.4);
-}
 .header-mask {
-  position: absolute;
+  /* menu bg */
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  z-index: -3;
+  z-index: 3;
   background: linear-gradient(180deg, #0079fa 30px, #fff 30px);
   pointer-events: none;
   transition: height var(--duration, 0.3s);
+  /* background: rgba(255, 0, 0, 0.3) !important; */
+  /* height: 400px !important; */
 }
 /* header top======================================================================== */
 .header-top {
@@ -88,6 +78,9 @@
   display: flex;
   align-items: center;
   padding: 0 40px;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.4);
+}
+.header.is-transparent.is-dark .header-bottom {
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
 /* logo================= */
@@ -121,7 +114,10 @@
 }
 @media screen and (min-width: 769px) {
   .header.is-transparent .gnb-link {
-    color: var(--color, #fff);
+    color: #fff;
+  }
+  .header.is-transparent.is-dark .gnb-link {
+    color: #212121;
   }
 }
 .gnb-link {
@@ -135,7 +131,7 @@
     line-height: 1.3125vw;
   }
 }
-.header.is-transparent .is-dark .gnb-depth {
+.header.is-transparent.is-dark .gnb-depth {
   border-color: rgba(33, 33, 33, 0.4);
 }
 @media screen and (min-width: 769px) {
@@ -170,10 +166,14 @@
 }
 
 .gnb-depth-intro {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  padding-top: 38px;
+  padding-top: 16px;
+  padding-left: 40px;
+  padding-right: 20px;
+  gap: 4px;
   border-right: 1px solid #ededed;
+  flex-basis: 260px;
   box-sizing: border-box;
 }
 @media screen and (min-width: 769px) and (max-width: 160px) {
@@ -191,6 +191,17 @@
     border-right: 1px solid #ededed;
   }
 }
+.gnb-depth-intro .depth-intro-title {
+  font-size: 35px;
+  line-height: 38px;
+  color: #212121;
+  pointer-events: none;
+}
+.gnb-depth-intro .depth-intro-desc {
+  margin-top: 8px;
+  pointer-events: none;
+}
+
 .gnb-depth-link {
   font-size: 16px;
   font-weight: 700;
@@ -200,8 +211,12 @@
 .gnb-depth2-list {
   font-size: 0;
 }
-.gnb-depth2-item {
+.gnb-depth-item {
   margin-top: 24px;
+}
+.gnb-depth2-item {
+  margin-top: 8px;
+  /* line-height: 1.5rem; */
 }
 .gnb-depth2-item .link {
   display: block;
@@ -210,6 +225,17 @@
   color: #757575;
   word-break: keep-all;
   word-wrap: break-word;
+}
+.gnb-item {
+  cursor: pointer;
+}
+.gnb-item.is-active .gnb-depth {
+  height: var(--depthHeight, 270px);
+  pointer-events: auto;
+}
+
+.gnb-item.is-active .gnb-depth-inner {
+  transform: translateY(0);
 }
 
 /* right================= */
@@ -255,13 +281,16 @@
   left: 7px;
   width: 20px;
   height: 2px;
-  background-color: #212121;
+  /* background-color: #212121; */
+  background-color: #fff;
 }
 .icon-hamburger-black::before {
-  background-color: #212121;
+  /* background-color: #212121; */
+  background-color: #fff;
 }
 .icon-hamburger-black::after {
-  background-color: #212121;
+  /* background-color: #212121; */
+  background-color: #fff;
 }
 .icon-hamburger::after,
 .icon-hamburger::before {
@@ -273,5 +302,30 @@
   height: 2px;
 }
 .icon-hamburger::after {
+  height: 1.5px;
   top: 9px;
+}
+
+/* active */
+.header.back {
+  background-color: #fff;
+}
+.header.hide {
+  /* transform: translateY(-100%); */
+  display: none;
+}
+
+.header-home:not(.is-change-me) {
+  background: transparent;
+}
+.header.is-transparent {
+  background: transparent;
+}
+.header.is-transparent .header-top {
+  /* 기본 헤더 위에 줄 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.header.is-transparent.is-dark .header-top {
+  /* 기본 헤더 위에 줄 dark버전 메뉴가 내려오면 바뀌어야 함*/
+  border-color: rgba(33, 33, 33, 0.4);
 }

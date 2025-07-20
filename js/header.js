@@ -1,55 +1,91 @@
-//menu
+// menu =================================================================================
+
 document.addEventListener("DOMContentLoaded", function () {
-    const gnbItems = document.querySelectorAll('.gnb-item');
+    const gnbItems = document.querySelectorAll(".gnb-item");
+    const header = document.querySelector(".header");
+    const headerMask = document.querySelector(".header-mask");
+    const defaultHeaderHeight = header.offsetHeight;
 
-    gnbItems.forEach((item) => {
-        item.addEventListener('mouseenter', () => {
-            console.log("mouseenter");
-            item.classList.add('is-active');
+    function openGnbDepth(currentItem) {
+        // 모든 gnb 닫기
+        gnbItems.forEach(item => {
+            if (item !== currentItem) item.classList.remove("is-active");
         });
 
-        item.addEventListener('mouseleave', () => {
-            console.log("mouseleave");
-            item.classList.remove('is-active');
-        });
-    });
+        // 현재 아이템 열기
+        currentItem.classList.add("is-active");
+        header.classList.add("is-dark");
 
-    // 전체 header 영역에서 벗어나면 전체 메뉴 닫기 (선택)
-    const header = document.querySelector('.header');
-    header.addEventListener('mouseleave', () => {
-        console.log("mouseleaveleave");
-        gnbItems.forEach((item) => item.classList.remove('is-active'));
-    });
-});
-
-//show
-const header = document.querySelector('.header');
-const content = document.querySelector('#content');
-
-let lastScrollTop = 0;
-let isHeaderHidden = false;
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const contentTop = content.getBoundingClientRect().top;
-
-    // 스크롤 방향 확인
-    const scrollDown = scrollTop > lastScrollTop;
-
-    // 1. content의 top이 화면 위에 닿은 후부터만 헤더 숨기기 적용
-    if (contentTop <= 0) {
-        if (scrollDown && !isHeaderHidden) {
-            header.classList.add('is-hidden');
-            isHeaderHidden = true;
-        } else if (!scrollDown && isHeaderHidden) {
-            header.classList.remove('is-hidden');
-            isHeaderHidden = false;
+        // 현재 depth 높이 측정
+        const gnbDepth = currentItem.querySelector(".gnb-depth");
+        if (gnbDepth) {
+            const depthHeight = gnbDepth.offsetHeight;
+            header.style.height = `${defaultHeaderHeight + depthHeight}px`;
+            headerMask.style.height = `${depthHeight + 100}px`;
         }
-    } else {
-        // #content 영역에 도달하기 전까지는 항상 보여주기
-        header.classList.remove('is-hidden');
-        isHeaderHidden = false;
     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 모바일 Safari 대응
+    function closeAllGnb() {
+        gnbItems.forEach(item => item.classList.remove("is-active"));
+        header.style.height = `${defaultHeaderHeight}px`;
+        headerMask.style.height = "0px";
+    }
+
+    gnbItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+            openGnbDepth(item);
+        });
+    });
+
+    // header를 벗어날 때 모든 gnb 닫기
+    header.addEventListener("mouseleave", () => {
+        closeAllGnb();
+        header.classList.remove("is-dark");
+    });
 });
+
+// menu end =================================================================================
+
+
+// header 숨기기=================================================================================
+
+const headerEl = document.querySelector(".header");
+const headerMask = document.querySelector(".header-mask");
+const keyInfo = document.querySelector(".key-info");
+
+let lastScroll = window.scrollY;
+let isScrollActive = false;
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    const keyInfoTop = keyInfo.getBoundingClientRect().top;
+
+    if (keyInfoTop <= 0) {
+        isScrollActive = true;
+    } else {
+        isScrollActive = false;
+        // key-info 도달 전이면 항상 header 보이게
+        headerEl.classList.remove("hide");
+        headerMask.style.height = `${headerEl.offsetHeight}px`;
+        headerMask.style.height = "0px";
+        return;
+    }
+
+    if (isScrollActive) {
+        if (currentScroll > lastScroll) {
+            // 아래로 스크롤 → 헤더 숨기기
+            headerEl.classList.add("hide");
+            headerEl.classList.remove("is-dark");
+            headerMask.style.height = "0px";
+        } else {
+            // 위로 스크롤 → 헤더 보이기
+            headerEl.classList.remove("hide");
+            headerEl.classList.add("is-dark");
+            headerMask.style.height = `${headerEl.offsetHeight}px`;
+        }
+
+        lastScroll = currentScroll;
+    }
+});
+
+// header 숨기기 end=================================================================================

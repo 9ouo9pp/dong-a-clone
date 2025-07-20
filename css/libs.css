@@ -4,6 +4,7 @@ body {
   height: 100%;
 }
 
+/* visual======================================================= */
 .swiper {
   /* position: relative; */
   /* width: 100%; */
@@ -45,6 +46,25 @@ body {
   object-fit: cover;
 }
 
+/* text */
+/* 슬라이드가 활성화되었을 때만 텍스트가 올라옴 */
+.swiper-slide-active .visual-content .text {
+  transform: translateY(0%);
+}
+/* 순차 등장용 */
+.visual-content .tex {
+  transition-delay: calc(var(--i) * 0.1s);
+}
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* progress bar */
 .autoplay-progress {
   position: absolute;
   right: 16px;
@@ -75,25 +95,91 @@ body {
   transform: rotate(-90deg);
 }
 
-/* text */
-/* 슬라이드가 활성화되었을 때만 텍스트가 올라옴 */
-.swiper-slide-active .visual-content .text {
-  transform: translateY(0%);
+.progress-bar {
+  position: absolute;
+  /* top: 20%; */
+  bottom: 10vh;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 4px;
+  background: none;
+  z-index: 10;
+  /* background-color: red; */
 }
+.progress-track {
+  /* 연한 선 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: #888;  */
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+}
+.progress-fill {
+  /* 진한 선 */
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: width 0.25s linear;
+}
+.plane-icon {
+  position: absolute;
+  top: -30px;
+  left: 0%;
+  font-size: 20px;
+  transition: left 0.25s linear;
+}
+/* progress bar end */
 
-/* 순차 등장용 */
-.visual-content .tex {
-  transition-delay: calc(var(--i) * 0.1s);
+/* 일시정지 */
+.swiper-toggle-btn {
+  position: absolute;
+  bottom: 8.5vh;
+  left: 320px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }
+.swiper-toggle-btn::before,
+.swiper-toggle-btn::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+/* Pause 아이콘 (두 줄) */
+.swiper-toggle-btn::before {
+  left: 8px;
+}
+.swiper-toggle-btn::after {
+  right: 8px;
+}
+/* ▶️ 재생 아이콘 (삼각형) 상태 */
+.swiper-toggle-btn.playing::before {
+  left: 12px;
+  top: 6px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 12px solid #fff;
+  background: none;
+}
+.swiper-toggle-btn.playing::after {
+  display: none;
+}
+/* 일시정지 end */
 
-.swiper-fade .swiper-slide {
-  pointer-events: none;
-  transition-property: opacity;
-}
-.swiper-backface-hidden .swiper-slide {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
+/* visual end ==================================================*/
 
 /* brand =======================================================*/
 .brand-swiper {

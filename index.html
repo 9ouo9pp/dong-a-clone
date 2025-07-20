@@ -37,11 +37,11 @@
     <div class="skip"></div>
     <div class="wrap">
       <!-- header  -->
+      <div class="header-mask"></div>
       <header
-        class="header is-transparent header-home is-dark is-pc is-scroll"
+        class="header is-transparent header-home is-pc is-scroll"
         style="transform: translateY(0px); --color: #212121"
       >
-        <div class="header-mask"></div>
         <div class="header-top only-pc is-background">
           <ul class="header-utility-list">
             <!-- 우측 최상단 유틸리티 -->
@@ -62,11 +62,10 @@
           <div class="header-bottom-center">
             <div class="gnb">
               <ul class="gnb-list">
-                <!-- data-min-height="270" 따로 자바스크립트에서 설정해서 주는 건가 -->
                 <li class="gnb-item" data-min-height="270">
                   <a href="#" class="gnb-link no-link">회사소개</a>
                   <!--  gnb depth -->
-                  <div class="gnb-depth" style="height: 0">
+                  <div class="gnb-depth">
                     <div class="gnb-depth-wrap">
                       <div class="gnb-depth-inner">
                         <div class="gnb-depth-intro only-pc">
@@ -120,8 +119,8 @@
                             >자속가능경영</strong
                           >
                           <span class="depth-intro-desc">
-                            중외제약은 사회적 책임을 다하고<br />지속가능한
-                            미래를 만듭니다.
+                            사회적 책임을 다하고<br />지속가능한 미래를
+                            만듭니다.
                           </span>
                         </div>
                         <ul class="gnb-depth-list gnb-depth-col">
@@ -299,7 +298,7 @@
             </div>
           </div>
           <!-- 네비게이션 -->
-          <div class="header-bottom-right">
+          <!-- <div class="header-bottom-right">
             <div class="header-search"></div>
             <div class="header-lang"></div>
             <button
@@ -309,7 +308,7 @@
             >
               <i class="icon icon-hamburger icon-hamburger-black"></i>
             </button>
-          </div>
+          </div> -->
         </div>
       </header>
       <!-- header end  -->
@@ -377,12 +376,20 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
-                <div class="autoplay-progress">
+                <!-- <div class="autoplay-progress">
                   <svg viewBox="0 0 48 48">
                     <circle cx="24" cy="24" r="20"></circle>
                   </svg>
                   <span></span>
+                </div> -->
+                <div class="progress-bar">
+                  <div class="progress-track"></div>
+                  <div class="progress-fill"></div>
                 </div>
+                <button
+                  class="swiper-toggle-btn"
+                  aria-label="슬라이드 일시정지"
+                ></button>
               </div>
             </div>
           </section>
@@ -1509,437 +1516,6 @@
         </div>
       </main>
       <!-- main end  -->
-
-      <!-- layer-gnb  -->
-      <!-- 메뉴 팝업 -->
-      <div class="layer-gnb only-pc">
-        <div class="layer-gnb-logo">
-          <a href="#">
-            <img
-              src="img/section/logo-9c189adb26a0adce7113625d2e2a8235.svg"
-              alt="동아제약"
-            />
-          </a>
-        </div>
-        <div class="layer-gnb-inner">
-          <div class="layer-gnb-utility">
-            <ul class="utility-list">
-              <li class="utility-item">
-                <a href="#" class="link">
-                  <i class="icon icon-find-sale-white"></i>
-                  <span class="text">판매약국찾기</span>
-                </a>
-              </li>
-              <li class="utility-item">
-                <a href="#" class="link">
-                  <i class="icon icon-audit-report-white"></i>
-                  <span class="text">감사제보하기</span>
-                </a>
-              </li>
-              <li class="utility-item">
-                <a href="#" class="link js-open-layer-search">
-                  <i class="icon icon-find-product-white"></i>
-                  <span class="text">제품 통합 검색</span>
-                </a>
-              </li>
-            </ul>
-            <ul class="chose-language">
-              <li class="chose-language-item">
-                <a href="#" class="link">KR</a>
-              </li>
-              <li class="chose-language-item">
-                <a href="#" class="link">EN</a>
-              </li>
-            </ul>
-          </div>
-          <div class="layer-gnb-main">
-            <!-- navigation -->
-            <ul class="layer-gnb-list">
-              <li class="layer-gnb-item">
-                <div class="layer-gnb-item-intro">
-                  <strong class="title">회사소개</strong>
-                </div>
-                <div class="layer-gnb-box-links">
-                  <div class="layer-gnb-item-col">
-                    <ul class="layer-gnb-list-link">
-                      <li class="item"><a href="#" class="link">인사말</a></li>
-                      <li class="item">
-                        <a href="#" class="link">기업개요</a>
-                      </li>
-                      <li class="item"><a href="#" class="link">연혁</a></li>
-                    </ul>
-                  </div>
-                  <div class="layer-gnb-item-col">
-                    <ul class="layer-gnb-list-link">
-                      <li class="item">
-                        <a href="#" class="link">생산시설</a>
-                        <ul class="layer-gnb-list-depth">
-                          <li class="depth-itme">
-                            <a href="#" class="depth-link">당진공장</a>
-                          </li>
-                          <li class="depth-itme">
-                            <a href="#" class="depth-link">천안공장</a>
-                          </li>
-                          <li class="depth-itme">
-                            <a href="#" class="depth-link">이천공장</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="layer-gnb-item-col">
-                    <ul class="layer-gnb-list-link">
-                      <li class="item">
-                        <a href="#" class="link">오시는 길</a>
-                        <ul class="layer-gnb-list-depth">
-                          <li class="depth-item">
-                            <a href="#" class="depth-lick">본사</a>
-                          </li>
-                          <li class="depth-item">
-                            <a href="#" class="depth-lick">연구소</a>
-                          </li>
-                          <li class="depth-item">
-                            <a href="#" class="depth-lick">공장</a>
-                          </li>
-                          <li class="depth-item">
-                            <a href="#" class="depth-lick">지점</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="layer-gnb-item">
-                <div class="layer-gnb-item-intro">
-                  <strong class="title">브랜드</strong>
-                </div>
-                <div class="layer-gnb-box-links">
-                  <div class="layer-gnb-item-col layer-gnb-itme-col-fix-width">
-                    <ul class="layer-gnb-list-link">
-                      <li class="item">
-                        <span class="link no-link">브랜드</span>
-                        <ul class="layer-gnb-list-depth">
-                          <li class="depth-item">
-                            <a href="#" class="depth-link">전체 브랜드</a>
-                          </li>
-                          <li class="depth-item">
-                            <a href="#" class="depth-link">대표 브랜드</a>
-                            <ul class="layer-gnb-list-depth">
-                              <li class="depth-item">
-                                <ul class="brand-list">
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/d22e74b73e364d4fbe906b2753149fc7.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/PPR_logo.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/44dc761493ca42609fdfc9fd4a27a99f.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/BNT_logo.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/OTM_logo.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/d7454eac0bb043bbaaf55c62caeab28e.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/GGD_logo.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/TPN_logo.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/24b2de57365047debba80bb94dd7d2af.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/6f91415c7bd24508bb4a9936cb4c52dc.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                  <li class="brand-item">
-                                    <a
-                                      href="#"
-                                      class="brand-link"
-                                      style="background: #030a8c"
-                                    >
-                                      <span
-                                        class="gnb-brand-img"
-                                        aria-label="Brand name"
-                                        style="
-                                          --url: url(/common/images/brand/6f91415c7bd24508bb4a9936cb4c52dc.svg);
-                                        "
-                                      ></span>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="depth-item">
-                                <ul class="depth-list-col depth-list-col-row">
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#"
-                                      >일반의약품</a
-                                    >
-                                  </li>
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#">의약외품</a>
-                                  </li>
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#">의료기기</a>
-                                  </li>
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#"
-                                      >건강기능식품</a
-                                    >
-                                  </li>
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#">화장품</a>
-                                  </li>
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#">기타</a>
-                                  </li>
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#">혼합음료</a>
-                                  </li>
-                                  <li class="depth-list-col-item">
-                                    <a class="depth-link" href="#">식품</a>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="layer-gnb-item-col layer-gnb-item-col-type3">
-                    <ul class="layer-gnb-list-link">
-                      <li class="item">
-                        <a href="#" class="link">생산시설</a>
-                        <ul class="layer-gnb-list-depth">
-                          <li class="depth-itme">
-                            <a href="#" class="depth-link">당진공장</a>
-                          </li>
-                          <li class="depth-itme">
-                            <a href="#" class="depth-link">천안공장</a>
-                          </li>
-                          <li class="depth-itme">
-                            <a href="#" class="depth-link">이천공장</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="layer-gnb-item">
-                <div class="layer-gnb-item-intro">
-                  <strong class="title">R&D</strong>
-                </div>
-                <div class="layer-gnb-box-links">
-                  <div class="layer-gnb-item-col layer-gnb-item-col-style2">
-                    <ul class="layer-gnb-list-link">
-                      <li class="item">
-                        <a href="#" class="link">연구소 소개</a>
-                        <div class="layer-gnb-list-box">
-                          <ul class="layer-gnb-list-depth">
-                            <li class="depth-item">
-                              <a href="#" class="depth-link"
-                                >어린이 건강 연구센터</a
-                              >
-                            </li>
-                            <li class="depth-item">
-                              <a href="#" class="depth-link">더마 연구 센터</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="layer-gnb-item-col">
-                    <ul class="layer-gnb-list-link layer-gnb-list-row">
-                      <li class="item">
-                        <a href="#" class="link">연구 영역</a>
-                        <div class="layer-gnb-list-box js-scroll-section">
-                          <ul class="layer-gnb-list-depth">
-                            <li class="depth-item">
-                              <a href="#" class="depth-link"
-                                >소비자 중심 혁신</a
-                              >
-                            </li>
-                            <li class="depth-item">
-                              <a href="#" class="depth-link">소재 연구</a>
-                            </li>
-                            <li class="depth-item">
-                              <a href="#" class="depth-link">제형 연구</a>
-                            </li>
-                          </ul>
-                          <ul class="layer-gnb-list-depth">
-                            <li class="depth-item">
-                              <a href="#" class="depth-link">관능 연구</a>
-                            </li>
-                            <li class="depth-item">
-                              <a href="#" class="depth-link">분석 과학</a>
-                            </li>
-                            <li class="depth-item">
-                              <a href="#" class="depth-link">지속 가능</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <button class="layer-gnb-btn-close js-layer-gnb-close is-active">
-          <i class="icon icon-hamburger icon-hamburger-black">
-            <span class="blind">Close Navigation</span>
-          </i>
-        </button>
-      </div>
-      <!-- layer-gnb end  -->
-
-      <!-- layer layer-search  -->
-      <!-- 나중에 js로 검색하는 어떤 걸 하나 보다
-       서치는 구현하지 않겠음 -->
-      <div class="layer layer-search" id="js-layer-search">
-        <div class="layer-dim"></div>
-        <div class="layer-content">
-          <div class="layer-search-box-inner">
-            <div class="layer-seach-form"></div>
-            <div class="layer-seach-content-scroll"></div>
-          </div>
-          <button class="btn-close-layer js-layer-btn-close only-pc">
-            <i class="icon icon-close-layer"></i>
-          </button>
-        </div>
-        <script></script>
-      </div>
-      <!-- layer layer-search end  -->
     </div>
   </body>
 </html>

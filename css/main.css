@@ -192,19 +192,19 @@
 
 .visual-content {
   position: absolute;
-  left: 160px;
+  left: 100px;
   display: flex;
   flex-direction: column;
   color: #fff;
 }
 .visual .swiper-slide.is-right .visual-content {
   position: absolute;
-  right: 160px;
-  right: 11.71303vw;
+  right: 100px;
+  right: 6vw;
   left: auto;
 }
 .swiper-slide.is-left .visual-content {
-  left: 160px;
+  left: 100px;
   right: auto;
 }
 .visual .swiper-slide.is-bottom .visual-content {
@@ -261,22 +261,22 @@
 
 @media screen and (max-width: 1600px) {
   .visual .swiper-slide.isright .visual-content {
-    right: 160px;
-    right: 11.71303vw;
+    right: 100px;
+    right: 6vw;
   }
 }
 @media screen and (max-width: 1356px) {
   .visual-content {
-    left: 160px;
-    left: 11.71303vw;
+    left: 100px;
+    left: 6vw;
     max-width: 689px;
     max-width: 50.21962vw;
     font-size: 40px;
     font-size: 2.92826vw;
   }
   .visual .swiper-slide.is-right .visual-content {
-    right: 160px;
-    right: 11.71303vw;
+    right: 100px;
+    /* right: 11.71303vw; */
   }
   .visual .swiper-slide.is-bottom .visual-content {
     bottom: 192px;
