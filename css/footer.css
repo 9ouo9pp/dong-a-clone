@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* content-bottom */
-.content-bottom {
+/* .content-bottom {
   position: fixed;
   left: 0;
   right: 0;
@@ -9,8 +9,10 @@
   z-index: 1;
   display: block;
   background-color: rebeccapurple;
+} */
+.content-bottom {
+  position: relative;
 }
-
 /* .section-message================================================================ */
 .section-message {
   padding: 152px 0;
