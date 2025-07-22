@@ -726,7 +726,7 @@
 .main-brand {
   position: relative;
   overflow: hidden;
-  padding: 180px 0 260px;
+  padding: 170px 0 260px;
   transition: background 1.2s ease-in;
   transition-delay: 150ms;
   /* background: #fff; */
@@ -757,16 +757,22 @@
 .brand-img-logo {
   will-change: transform, opacity;
 }
-
 .brand-img-product {
-  transform: translateY(50px) scale(0.8);
-  opacity: 0;
+  /* transform: translateY(50px) scale(0.8); */
+  /* opacity: 0; */
 }
-
 .brand-img-logo {
-  transform: translateY(0);
+  /* transform: translateY(0); */
 }
-
+.group-utility {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  color: #fff;
+  z-index: 1;
+}
 /* 5.main-brand  end*/
 
 /* 6.business */

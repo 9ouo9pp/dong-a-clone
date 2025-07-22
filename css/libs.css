@@ -257,9 +257,10 @@ body {
 /* 비활성 슬라이드일 때는 로고를 슬라이드 중앙에 띄우기 위해 절대 위치 조정 */
 .swiper-slide:not(.swiper-slide-active) .brand-img-logo {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* transform: translateX(-50%); */
   opacity: 1;
   pointer-events: none;
   z-index: 10;
@@ -267,7 +268,7 @@ body {
 /* 활성 슬라이드일 땐 상대 위치로 돌아가서 이미지 아래로 내려감 */
 .swiper-slide-active .brand-img-logo {
   position: absolute;
-  top: 95%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
